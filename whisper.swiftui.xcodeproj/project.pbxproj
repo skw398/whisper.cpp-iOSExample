@@ -21,6 +21,7 @@
 		0AAC5DCE2953A05C003032C3 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DCD2953A05C003032C3 /* WhisperState.swift */; };
 		0AAC5DD12953A394003032C3 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DD02953A394003032C3 /* LibWhisper.swift */; };
 		18AED4812AB21F2B009D854F /* ggml-alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 18AED47F2AB21F2B009D854F /* ggml-alloc.c */; };
+		B4A73F8B2AE51480004B713D /* WavePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A73F8A2AE51480004B713D /* WavePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0AAC5DD02953A394003032C3 /* LibWhisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
 		18AED47F2AB21F2B009D854F /* ggml-alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ggml-alloc.c"; sourceTree = "<group>"; };
 		18AED4802AB21F2B009D854F /* ggml-alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-alloc.h"; sourceTree = "<group>"; };
+		B4A73F8A2AE51480004B713D /* WavePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0AAC5D9C29539CCF003032C3 /* ContentView.swift */,
+				B4A73F8A2AE51480004B713D /* WavePicker.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			files = (
 				0AAC5D9D29539CCF003032C3 /* ContentView.swift in Sources */,
 				0AAC5D9B29539CCF003032C3 /* WhisperCppDemoApp.swift in Sources */,
+				B4A73F8B2AE51480004B713D /* WavePicker.swift in Sources */,
 				0AAC5DCC29539EB1003032C3 /* ggml.c in Sources */,
 				0AAC5DCE2953A05C003032C3 /* WhisperState.swift in Sources */,
 				0AAC5DD12953A394003032C3 /* LibWhisper.swift in Sources */,

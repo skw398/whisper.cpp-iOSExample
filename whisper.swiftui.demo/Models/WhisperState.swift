@@ -47,6 +47,34 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
         }
     }
     
+    private var fileUrl: URL? {
+        do {
+            return try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                .appendingPathComponent("output.wav")
+        } catch {
+            messageLog += "\(error.localizedDescription)\n"
+            return nil
+        }
+    }
+    
+    func transcribeSelectedWave(_ url: URL) {
+        do {
+            guard let fileUrl else { return }
+
+            if FileManager.default.fileExists(atPath: fileUrl.path) {
+                try FileManager.default.removeItem(at: fileUrl)
+            }
+            try FileManager.default.copyItem(at: url, to: fileUrl)
+            
+            Task {
+                messageLog += "Processing \(url.lastPathComponent)...\n"
+                await transcribeAudio(fileUrl)
+            }
+        } catch {
+            self.messageLog += "\(error.localizedDescription)\n"
+        }
+    }
+    
     func transcribeSample() async {
         if let sampleUrl {
             await transcribeAudio(sampleUrl)
@@ -93,16 +121,16 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
                 await transcribeAudio(recordedFile)
             }
         } else {
-            requestRecordPermission { granted in
+            requestRecordPermission { [weak self] granted in
+                guard let self else { return }
                 if granted {
                     Task {
                         do {
                             self.stopPlayback()
-                            let file = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-                                .appending(path: "output.wav")
-                            try await self.recorder.startRecording(toOutputFile: file, delegate: self)
+                            guard let fileUrl = self.fileUrl else { return }
+                            try await self.recorder.startRecording(toOutputFile: fileUrl, delegate: self)
                             self.isRecording = true
-                            self.recordedFile = file
+                            self.recordedFile = fileUrl
                         } catch {
                             print(error.localizedDescription)
                             self.messageLog += "\(error.localizedDescription)\n"

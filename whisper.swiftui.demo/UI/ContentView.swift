@@ -3,12 +3,25 @@ import AVFoundation
 
 struct ContentView: View {
     @StateObject var whisperState = WhisperState()
+    @State private var showPicker = false
     
     var body: some View {
         NavigationStack {
             VStack {
+                Button("Select WAV File") {
+                    showPicker = true
+                }
+                .sheet(isPresented: $showPicker) {
+                    WavePicker(onPick: { url in
+                        showPicker = false
+                        whisperState.transcribeSelectedWave(url)
+                    }, onCancel: {
+                        showPicker = false
+                    })
+                }
+                
                 HStack {
-                    Button("Transcribe", action: {
+                    Button("Transcribe sample", action: {
                         Task {
                             await whisperState.transcribeSample()
                         }
