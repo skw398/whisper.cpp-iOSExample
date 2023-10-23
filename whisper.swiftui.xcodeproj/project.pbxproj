@@ -16,11 +16,11 @@
 		0AAC5D9D29539CCF003032C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5D9C29539CCF003032C3 /* ContentView.swift */; };
 		0AAC5D9F29539CD0003032C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC5D9E29539CD0003032C3 /* Assets.xcassets */; };
 		0AAC5DA329539CD0003032C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC5DA229539CD0003032C3 /* Preview Assets.xcassets */; };
-		0AAC5DCB29539EB1003032C3 /* whisper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DC729539EB0003032C3 /* whisper.cpp */; settings = {COMPILER_FLAGS = "-Wno-shorten-64-to-32"; }; };
-		0AAC5DCC29539EB1003032C3 /* ggml.c in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DC929539EB0003032C3 /* ggml.c */; settings = {COMPILER_FLAGS = "-DGGML_USE_ACCELERATE -Wno-shorten-64-to-32"; }; };
 		0AAC5DCE2953A05C003032C3 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DCD2953A05C003032C3 /* WhisperState.swift */; };
 		0AAC5DD12953A394003032C3 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC5DD02953A394003032C3 /* LibWhisper.swift */; };
-		18AED4812AB21F2B009D854F /* ggml-alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 18AED47F2AB21F2B009D854F /* ggml-alloc.c */; };
+		B42BC71E2AE68C5B00291B85 /* ggml-alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = B42BC7192AE68C5B00291B85 /* ggml-alloc.c */; };
+		B42BC71F2AE68C5B00291B85 /* ggml.c in Sources */ = {isa = PBXBuildFile; fileRef = B42BC71A2AE68C5B00291B85 /* ggml.c */; };
+		B42BC7202AE68C5B00291B85 /* whisper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B42BC71B2AE68C5B00291B85 /* whisper.cpp */; };
 		B4A73F8B2AE51480004B713D /* WavePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A73F8A2AE51480004B713D /* WavePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,14 +37,14 @@
 		0AAC5DA029539CD0003032C3 /* WhisperCppDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhisperCppDemo.entitlements; sourceTree = "<group>"; };
 		0AAC5DA229539CD0003032C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0AAC5DC629539EAF003032C3 /* WhisperCppDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhisperCppDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		0AAC5DC729539EB0003032C3 /* whisper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = whisper.cpp; path = Projects/whisper.cpp/whisper.cpp/whisper.cpp; sourceTree = "<group>"; };
-		0AAC5DC829539EB0003032C3 /* whisper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = whisper.h; path = Projects/whisper.cpp/whisper.cpp/whisper.h; sourceTree = "<group>"; };
-		0AAC5DC929539EB0003032C3 /* ggml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ggml.c; path = Projects/whisper.cpp/whisper.cpp/ggml.c; sourceTree = "<group>"; };
-		0AAC5DCA29539EB0003032C3 /* ggml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ggml.h; path = Projects/whisper.cpp/whisper.cpp/ggml.h; sourceTree = "<group>"; };
 		0AAC5DCD2953A05C003032C3 /* WhisperState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperState.swift; sourceTree = "<group>"; };
 		0AAC5DD02953A394003032C3 /* LibWhisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
-		18AED47F2AB21F2B009D854F /* ggml-alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "ggml-alloc.c"; path = "Projects/whisper.cpp/whisper.cpp/ggml-alloc.c"; sourceTree = "<group>"; };
-		18AED4802AB21F2B009D854F /* ggml-alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ggml-alloc.h"; path = "Projects/whisper.cpp/whisper.cpp/ggml-alloc.h"; sourceTree = "<group>"; };
+		B42BC7182AE68C5B00291B85 /* whisper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whisper.h; sourceTree = "<group>"; };
+		B42BC7192AE68C5B00291B85 /* ggml-alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "ggml-alloc.c"; sourceTree = "<group>"; };
+		B42BC71A2AE68C5B00291B85 /* ggml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ggml.c; sourceTree = "<group>"; };
+		B42BC71B2AE68C5B00291B85 /* whisper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = whisper.cpp; sourceTree = "<group>"; };
+		B42BC71C2AE68C5B00291B85 /* ggml-alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ggml-alloc.h"; sourceTree = "<group>"; };
+		B42BC71D2AE68C5B00291B85 /* ggml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggml.h; sourceTree = "<group>"; };
 		B4A73F8A2AE51480004B713D /* WavePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0A8E48FF2954B3F100704C1B /* README.md */,
-				0AAC5DC529539E89003032C3 /* whisper.cpp */,
+				B42BC7172AE68C5B00291B85 /* whisper.cpp */,
 				0AAC5DCF2953A36C003032C3 /* whisper.cpp.swift */,
 				0AAC5D9929539CCF003032C3 /* whisper.swiftui.demo */,
 				0AAC5D9829539CCF003032C3 /* Products */,
@@ -126,20 +126,6 @@
 			path = "../Preview Content";
 			sourceTree = "<group>";
 		};
-		0AAC5DC529539E89003032C3 /* whisper.cpp */ = {
-			isa = PBXGroup;
-			children = (
-				18AED47F2AB21F2B009D854F /* ggml-alloc.c */,
-				18AED4802AB21F2B009D854F /* ggml-alloc.h */,
-				0AAC5DC929539EB0003032C3 /* ggml.c */,
-				0AAC5DCA29539EB0003032C3 /* ggml.h */,
-				0AAC5DC729539EB0003032C3 /* whisper.cpp */,
-				0AAC5DC829539EB0003032C3 /* whisper.h */,
-			);
-			name = whisper.cpp;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		0AAC5DCF2953A36C003032C3 /* whisper.cpp.swift */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +152,19 @@
 				0AAC5DA129539CD0003032C3 /* Preview Content */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		B42BC7172AE68C5B00291B85 /* whisper.cpp */ = {
+			isa = PBXGroup;
+			children = (
+				B42BC7182AE68C5B00291B85 /* whisper.h */,
+				B42BC7192AE68C5B00291B85 /* ggml-alloc.c */,
+				B42BC71A2AE68C5B00291B85 /* ggml.c */,
+				B42BC71B2AE68C5B00291B85 /* whisper.cpp */,
+				B42BC71C2AE68C5B00291B85 /* ggml-alloc.h */,
+				B42BC71D2AE68C5B00291B85 /* ggml.h */,
+			);
+			path = whisper.cpp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,15 +242,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AAC5D9D29539CCF003032C3 /* ContentView.swift in Sources */,
+				B42BC7202AE68C5B00291B85 /* whisper.cpp in Sources */,
 				0AAC5D9B29539CCF003032C3 /* WhisperCppDemoApp.swift in Sources */,
+				B42BC71E2AE68C5B00291B85 /* ggml-alloc.c in Sources */,
 				B4A73F8B2AE51480004B713D /* WavePicker.swift in Sources */,
-				0AAC5DCC29539EB1003032C3 /* ggml.c in Sources */,
 				0AAC5DCE2953A05C003032C3 /* WhisperState.swift in Sources */,
+				B42BC71F2AE68C5B00291B85 /* ggml.c in Sources */,
 				0AAC5DD12953A394003032C3 /* LibWhisper.swift in Sources */,
 				0AA7514C2953B569001EE061 /* RiffWaveUtils.swift in Sources */,
-				0AAC5DCB29539EB1003032C3 /* whisper.cpp in Sources */,
 				0AA7514E2953D958001EE061 /* Recorder.swift in Sources */,
-				18AED4812AB21F2B009D854F /* ggml-alloc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
